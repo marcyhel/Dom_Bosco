@@ -5,10 +5,12 @@ import 'package:bosco/widgets/input_custon.dart';
 class Card_Quest extends StatelessWidget {
   String label;
   Function func;
+  bool erro;
   Card_Quest({
     Key? key,
     required this.label,
     required this.func,
+    required this.erro,
   }) : super(key: key);
 
   @override
@@ -24,7 +26,7 @@ class Card_Quest extends StatelessWidget {
           CustonTextField(
             valor: "",
             func: func,
-            erro: false,
+            erro: erro,
           ),
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:bosco/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
 class Painel_Text extends StatelessWidget {
@@ -9,21 +10,27 @@ class Painel_Text extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            width: 100,
+            width: ReturnResponse(g: 100, m: 50, p: 0).retorno(context),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 50),
-            height: 250,
-            width: 40,
-            color: Color(0xffCAE8E2),
+            margin: EdgeInsets.symmetric(
+              horizontal: ReturnResponse(g: 50, m: 30, p: 20).retorno(context),
+            ),
+            height: 350,
+            width: ReturnResponse(g: 40, m: 20, p: 10).retorno(context),
+            color: Color(0xff69F071),
           ),
           Container(
-            width: MediaQuery.of(context).size.width / 2,
+            width: ReturnResponse(
+              g: MediaQuery.of(context).size.width / 2,
+              m: MediaQuery.of(context).size.width / 1.7,
+              p: MediaQuery.of(context).size.width / 1.3,
+            ).retorno(context),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Traveling Delights",
+                  "Visão, Missão e Valores",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -35,7 +42,7 @@ class Painel_Text extends StatelessWidget {
                     width: 100,
                     color: Colors.black54),
                 const Text(
-                  "Below you will find a selection of sample group tours and vacations that give an idea of the type of itinerary that can be put together. Please note that these are only sample itineraries and every tour we create is tailored to meet the group’s needs. We work with each individual tour organiser to personalise tours to meet their exact requirements. Each of the itineraries can be customized for large or small private group tours.",
+                  "A nossa missão é ser um time obstinado em prever e atender as necessidades dos clientes, com qualidade e segurança sempre agregando valores.\n\nSer líder e inspirar, melhor em conjuntos de prédios imobiliários somente para locação em Rio Verde.\n\nTemos como valores a honestidade, respeito, confiança e conforto.",
                   style: TextStyle(
                     fontSize: 23,
                   ),

@@ -37,8 +37,8 @@ class Painel_login extends StatelessWidget {
             height: 40,
           ),
           FlatButton(
-            color: Color(0xffF2C6B6),
-            hoverColor: Color(0xffffb6a6),
+            color: Color(0xff3861FA),
+            hoverColor: Color(0xff3861AA),
             onPressed: () {
               showDialog(
                   context: context,
@@ -52,7 +52,7 @@ class Painel_login extends StatelessWidget {
                 "Garanta já sua vaga",
                 style: TextStyle(
                     // fontWeight: FontWeight.bold,
-                    color: Colors.black54,
+                    color: Colors.white,
                     fontSize: 20),
               ),
             ),

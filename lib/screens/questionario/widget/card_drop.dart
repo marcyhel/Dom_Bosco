@@ -6,11 +6,13 @@ import 'package:bosco/widgets/input_custon.dart';
 class Card_Drop extends StatelessWidget {
   String label;
   Function func;
+  bool erro;
   List<dynamic> list;
   Card_Drop({
     Key? key,
     required this.label,
     required this.func,
+    required this.erro,
     required this.list,
   }) : super(key: key);
 
@@ -24,7 +26,13 @@ class Card_Drop extends StatelessWidget {
             margin: EdgeInsets.only(left: 10),
             child: Text(label),
           ),
-          Card_cuaton_Drop(UF: list, label: label, valor: "valor", erro: false)
+          Card_cuaton_Drop(
+            UF: list,
+            label: label,
+            valor: "valor",
+            erro: erro,
+            func: func,
+          )
         ],
       ),
     );

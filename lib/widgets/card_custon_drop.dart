@@ -8,13 +8,14 @@ class Card_cuaton_Drop extends StatelessWidget {
   String valor;
   bool erro;
   List<dynamic> UF;
-
+  Function func;
   Card_cuaton_Drop({
     Key? key,
     required this.label,
     required this.valor,
     required this.erro,
     required this.UF,
+    required this.func,
   }) : super(key: key);
   //final Mob_Dados mob = GetIt.I<Mob_Dados>();
   List<SmartDropdownMenuItem> items = [];
@@ -60,13 +61,15 @@ class Card_cuaton_Drop extends StatelessWidget {
                 const EdgeInsets.only(top: 8, bottom: 20, left: 8, right: 8),
             child: SmartDropDown(
               items: items,
-              hintText: "-dD", // mob.estado == "" ? " UF " : mob.estado,
+              hintText: " ", // mob.estado == "" ? " UF " : mob.estado,
               borderRadius: 10,
               maxListHeight: 150,
-              borderColor: const Color(0xff1E123A),
+              borderColor: erro ? Colors.red : const Color(0xff1E123A),
               expandedColor: const Color(0xff1E123A),
               onChanged: (e) {
                 //mob.setEstado(UF[e - 1]);
+                //print(UF[e-1]);
+                func(UF[e - 1]);
                 print(e);
               },
             ),
